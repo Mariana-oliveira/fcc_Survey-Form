@@ -239,7 +239,10 @@ fieldset{
 		text-align: left;
 	}
 	
-	
+	.top-header p{
+		font-weight: 800;
+		text-shadow: 1px 1px var(--bg-color);
+	}
 
 	h1{
 		font-size: 4rem;
