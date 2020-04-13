@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <title>Survey Form</title>
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <h1 id="title"><span>Futebol Clube do Porto</span></h1>
+
+            <p id="description">Thank you for taking the time to answer this survey It's really important for us to have your opinion.</p>
+        </div>
+    </header>
+
+    <form id="survey-form">
+
+        <div class="form-group">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email"  class="form-input" placeholder="Enter you email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age" id="number-label">Age</label>
+            <input type="number" id="number"  class="form-input" min="10" max="120" placeholder="Age">
+        </div>
+
+        <div class="form-group">
+            <fieldset>
+                <legend>Favorite Player</legend>
+
+                <label for="goalkeeper" class="dropdown-player">Best Goalkeeper:</label>
+                <select name="goalkeeper" id="dropdown" class="form-input dropdown">
+                    <option value="Diogo Costa">Diogo Costa</option>
+                    <option value="Iker Casillas">Iker Casillas</option>
+                    <option value="Agustín Marchesín">Agustín Marchesín</option>
+                    <option value="Mouhamed Mbaye">Mouhamed Mbaye</option>
+                </select>
+
+                <label for="defender" class="dropdown-player">Best Defender:</label>
+                <select name="defender" id="dropdown-defender" class="form-input dropdown">
+                    <option value="Alex Telles">Alex Telles</option>
+                    <option value="Diogo Leite">Diogo Leite</option>
+                    <option value="Marcano">Marcano</option>
+                    <option value="Chancel Mbemba">Chancel Mbemba</option>
+                    <option value="Pepe">Pepe</option>
+                    <option value="Tomás Esteves">Tomás Esteves</option>
+                    <option value="Wilson Manafá">Wilson Manafá</option>
+                </select>
+
+                <label for="midfielder" class="dropdown-player">Best Midfielder:</label>
+                <select name="midfielder" id="dropdown-midfielder" class="form-input dropdown">
+                    <option value="Danilo">Danilo</option>
+                    <option value="Loum">Loum</option>
+                    <option value="Shoya Nakajima">Shoya Nakajima</option>
+                    <option value="Otávio">Otávio</option>
+                    <option value="Romário">Romário</option>
+                    <option value="Sérgio Oliveira">Sérgio Oliveira</option>
+                    <option value="Mateus Uribe">Mateus Uribe</option>
+                    <option value="Vítor Ferreira">Vítor Ferreira</option>
+                </select>
+
+                <label for="forward" class="dropdown-player">Best Forward:</label>
+                <select name="forward" id="dropdown-forward" class="form-input dropdown">
+                    <option value="Vincent Aboubakar">Vincent Aboubakar</option>
+                    <option value="Jesús Corona">Jesús Corona</option>
+                    <option value="Luis Díaz">Luis Díaz</option>
+                    <option value="Fábio Silva">Fábio Silva</option>
+                    <option value="Moussa Marega">Moussa Marega</option>
+                    <option value="Tiquinho Soares">Tiquinho Soares</option>
+                    <option value="Zé Luís">Zé Luís</option>
+                </select>
+
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+            <fieldset>
+                <legend>Best Team Formation Used This Season</legend>
+                
+                <label class="radio-label">
+                    <input type="radio" name="team-formation" value="4-4-2" class="form-radio" checked>
+                    4-4-2
+                </label>
+                
+                <label class="radio-label">
+                    <input type="radio" name="team-formation" value="4-4-2 double 6" class="form-radio">
+                    4-4-2 double 6
+                </label>
+
+                <label class="radio-label">                
+                    <input type="radio" name="team-formation" value="3-1-4-2" class="form-radio">
+                    3-1-4-2
+                </label>
+                
+                <label class="radio-label">
+                    <input type="radio" name="team-formation" value="4-2-3-1" class="form-radio">
+                    4-2-3-1
+                </label>
+     
+                <label class="radio-label">
+                    <input type="radio" name="team-formation" value="44-1-4-1" class="form-radio">
+                    4-1-4-1
+                </label>
+                
+                <label class="radio-label">
+                    <input type="radio" name="team-formation"  value="4-4-1-1" class="form-radio">
+                    4-4-1-1
+                </label>
+
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+            <p>Which competitions do you think F.C. Porto will win this year?
+            </p>
+            <label>
+                <input type="checkbox" name="competitions" class="form-check" value="primeira-liga">
+                Primeira Liga
+            </label>
+            <label>
+                <input type="checkbox" name="competitions" class="form-check" value="taca-portugal">
+                Taça de Portugal
+            </label>
+            <label>
+                <input type="checkbox" name="competitions" class="form-check" value="taca-liga">
+                Taça da Liga
+            </label>
+        </div>
+        
+
+        <div class="form-group">
+            <label for="textarea" id="textarea-label">Please let us know why you think FC Porto should be 2019/2020 Champion.</label>
+            <textarea name="textarea" id="textarea" class="form-input" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+    
+        </div>
+
+        <div class="form-group">
+            <button id="submit" type="submit">Submit</button>
+        </div>
+
+
+    </form>
+
+</body>
+</html>

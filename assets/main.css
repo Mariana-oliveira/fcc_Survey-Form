@@ -1,0 +1,247 @@
+/*
+ 	========================================
+	 CSS RESET
+	 	http://meyerweb.com/eric/tools/css/reset/ 
+  		 v2.0 | 20110126
+   		License: none (public domain)
+	========================================
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/*  
+    ======================================================
+    Colors
+    ======================================================
+*/
+
+:root{
+	--bg-color: #103353;
+	--bg-color-transp-form: rgba(16, 51, 83, 0.7);
+	--bg-color-transp: rgba(16, 51, 83, 0.2);
+	--font-color: #fff;
+	--color-green: #37af65;
+	--highlight-blue: #0055ff;
+}
+
+
+/*
+    ======================================================
+    Global Style
+    ======================================================
+*/
+html{
+	box-sizing: border-box;
+}
+
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+
+body{
+	color: var(--font-color);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.3em;
+	line-height: 1.5;
+	letter-spacing: 0.1rem;
+}
+
+body::before{
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background-color: var(--bg-color);
+	background-image: linear-gradient(
+		180deg,
+		var(--bg-color),
+		rgba(255, 255, 255, 0.5),
+		var(--bg-color-transp)
+	  ), url(https://images5.alphacoders.com/989/thumb-1920-989979.jpg); /* https://wall.alphacoders.com/big.php?i=989979 - Licença: 	Unknown */
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+
+/*
+    ======================================================
+    Header
+    ======================================================
+*/
+.top-header{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px;
+	justify-content: center;
+	align-items: center;
+}
+
+.top-header p{
+	flex: 0 0 100%;
+	text-align: center;
+	font-style: italic;
+}
+
+h1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 7rem;
+	font-weight: 800;
+	text-shadow:  5px 5px var(--bg-color);
+}
+
+
+
+
+/*
+    ======================================================
+    Form
+    ======================================================
+*/
+label, input, textarea, button{
+	display: block;
+
+}
+
+fieldset{
+	border: 1px solid #000;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+#survey-form{
+	background-color: var(--bg-color-transp-form);
+	max-width: 800px;
+	width:80%;
+	margin: 0 auto;
+	border-radius: 10px;
+	padding: 25px;
+}
+
+.form-group{
+	margin-bottom: 20px;
+}
+
+.form-input{
+	background-color: var(--font-color);
+	opacity: 1;
+	height: 40px;
+	border-radius: 5px;
+
+	font-size: 1.3rem;
+	width: 100%;	
+}
+
+.dropdown{
+	width: 95%;
+	margin-bottom: 15px;
+}
+
+.dropdown:nth-of-type(4){
+	margin-bottom: 0;
+}
+
+.dropdown-player{
+	font-size: 1.2rem;
+	font-weight: 800;
+}
+
+.dropdown-player:nth-of-type(1){
+	margin-top: -10px;
+}
+
+
+.form-radio, .form-check{
+	display: inline-block;
+}
+
+.radio-label{
+	cursor: pointer;
+}
+
+
+#textarea{
+	margin-bottom: 30px;
+	height: 200px;
+	resize: vertical;
+}
+
+#submit{
+	background-color: var(--highlight-blue);
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: 800;
+	color: var(--font-color);
+	margin: 0 auto;
+	height: 50px;
+	width: 150px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 800px){
+
+	.top-header{
+		display: block;
+		margin: 30px;
+		text-align: left;
+	}
+	
+	
+
+	h1{
+		font-size: 4rem;
+	}
+}
