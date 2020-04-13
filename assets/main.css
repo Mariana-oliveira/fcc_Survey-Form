@@ -131,6 +131,8 @@ body::before{
 	flex: 0 0 100%;
 	text-align: center;
 	font-style: italic;
+	font-weight: 800;
+	text-shadow: 1px 1px var(--bg-color);
 }
 
 h1{
@@ -154,10 +156,13 @@ label, input, textarea, button{
 }
 
 fieldset{
-	border: 1px solid #000;
+	border: 1.5px solid var(--font-color);
 	padding: 15px;
 	margin-bottom: 20px;
+	border-radius: 5px;
 }
+
+
 
 #survey-form{
 	background-color: var(--bg-color-transp-form);
@@ -169,7 +174,7 @@ fieldset{
 }
 
 .form-group{
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 
 .form-input{
@@ -209,6 +214,10 @@ fieldset{
 	cursor: pointer;
 }
 
+.form-group p, .form-group label{
+	margin-bottom: 5px;
+}
+
 
 #textarea{
 	margin-bottom: 30px;
@@ -239,11 +248,6 @@ fieldset{
 		text-align: center;
 	}
 	
-	.top-header p{
-		font-weight: 800;
-		text-shadow: 1px 1px var(--bg-color);
-	}
-
 	h1{
 		font-size: 2.5rem;
 	}
